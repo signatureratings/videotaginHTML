@@ -7,7 +7,7 @@ const skipbuttons = document.querySelectorAll('[data-skip]')
 const ranges = document.querySelectorAll('.player-slider')
 const text = document.querySelector('.icon')
 const controls = document.querySelector('.player-controls')
-/** */
+/**Functions */
 function togglePlay() {
   if (video.paused) {
     video.play()
@@ -37,7 +37,7 @@ function drag(e) {
   const dragtime = (e.offsetX / progress.offsetWidth) * video.duration
   video.currentTime = dragtime
 }
-/** */
+/** Events listeners*/
 video.addEventListener('click', togglePlay)
 video.addEventListener('play', updateButton)
 video.addEventListener('pause', updateButton)
